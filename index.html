@@ -15,23 +15,25 @@
   </head>
   <body>
     <section class="calculator">
-      <div>
-        <p class="nav-1 justify-content-end">1 2 3</p>
-      </div>
-      <span class="cal">calc</span>
-      <div class="nav">
-        <div class="theme">
-          <p>THEME</p>
-        </div>
-        <div class="form-check form-switch">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            role="switch"
-            id="flexSwitchCheckChecked"
-            checked
-          />
-          <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+      <!-- <div class="theme-number">123</div> -->
+      <div class="calc-theme">
+        <div class="cal">Calc</div>
+
+        <div class="theme-toggle">
+          <div class="theme">THEME</div>
+          <div class="form-check form-switch">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckChecked"
+              checked
+            />
+            <label
+              class="form-check-label"
+              for="flexSwitchCheckChecked"
+            ></label>
+          </div>
         </div>
       </div>
       <input type="text" class="screen" placeholder="0" />
@@ -41,7 +43,7 @@
         <button onclick="calculate(7)">7</button>
         <button onclick="calculate(8)">8</button>
         <button onclick="calculate(9)">9</button>
-        <button onclick="del()">DEL</button>
+        <button onclick="del()" class="grey">DEL</button>
         <button onclick="calculate(4)">4</button>
         <button onclick="calculate(5)">5</button>
         <button onclick="calculate(6)">6</button>
@@ -60,7 +62,7 @@
         <button onclick="reset()" class="reset-equality delete-reset">
           RESET
         </button>
-        <button onclick="result('=')" class="reset-equality equality-red">
+        <button onclick="Result()" class="reset-equality equality-red">
           =
         </button>
       </div>

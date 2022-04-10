@@ -12,7 +12,16 @@ function del() {
 
 result.addEventListener('click', function () {})
 
+// make the result = work
+
+let Result = () => {
+  try {
+    result.value = eval(result.value)
+  } catch (err) {
+    alert('Enter the valid input')
+  }
+}
 // clear the whole input (please check out why this isnt working)
 function reset() {
-  reset.value = ''
+  result.value = ''
 }

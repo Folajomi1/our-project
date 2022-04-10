@@ -7,90 +7,88 @@
   justify-content: center;
   align-items: center;
 }
-section {
-  height: fit-content;
-  /* margin: 0; */
-  padding: 3% 5% 4.5%;
+.calculator {
+  padding: 5%;
 }
 body {
   background-color: rgb(59, 70, 100);
 }
 
-.nav-1 {
-  color: #fff;
+.theme-number {
   position: absolute;
-  left: 85vw;
-  bottom: 95vh;
+  right: 10;
 }
-/* .nav {
-    display: flexbox;
-    margin: 8px;
-    float: right;
-  } */
+
+.calc-theme {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.theme-toggle {
+  display: flex;
+}
 .theme {
   margin-right: 15px;
   font-size: 20px;
-  color: #fff;
-  position: absolute;
-  left: 70vw;
-  top: 3vh;
-}
-.form-switch {
-  position: absolute;
-  left: 85vw;
-  top: 3.5vh;
 }
 .cal {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 30px;
   font-weight: bold;
-  color: #fff;
 }
+
 .screen {
   width: 100%;
-  height: 70px;
+  height: 50px;
   background-color: rgb(25, 31, 50);
   border: none;
   border-radius: 10px;
   text-align: end;
   color: rgb(254, 252, 253);
-  /* pointer-events: none; */
-  margin: 5% 0;
+  pointer-events: none;
   font-size: 40px;
   padding: 20px;
+  word-wrap: break-word;
 }
 .grids {
   display: grid;
-  grid-template-columns: repeat(4, 20%);
-  /* grid-template-rows: repeat(5, 20%); */
-  grid-gap: 6% 3%;
-  /* row-gap: 0; */
-  margin: 10px;
   justify-content: center;
-  /* height: 70%; */
-  /* overflow: hidden; */
-  height: fit-content;
-  padding: 10% 5% 28%;
-  border: 10px;
-  background-color: rgb(25, 31, 50);
-  border-radius: 3%;
+  align-content: center;
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: repeat(5, 50px);
+  margin: 10px 0;
+  grid-gap: 1rem;
+  padding: 8%;
+  background-color: rgb(26, 34, 60);
+  border-radius: 0.5rem;
 }
+
 .reset-equality {
   grid-column: span 2;
 }
-
+.grids .grey {
+  background: rgb(101, 113, 154);
+  color: white;
+  box-shadow: 0 3px 0 rgb(80, 95, 143);
+}
 button {
+  cursor: pointer;
   border-radius: 10%;
   border: none;
-  /* height: 50%; */
-  box-shadow: 10%;
+  height: 100%;
+  box-shadow: 5%;
   font-size: 30px;
   font-weight: bold;
   color: rgb(68, 74, 90);
+  outline: none;
   background-color: hwb(30 86% 8%);
-  box-shadow: 0 6px 0 rgb(192, 191, 176);
-  padding: 1rem 0.7rem;
+  box-shadow: 0 3px 0 rgb(192, 191, 176);
 }
+
+button:hover {
+  background-color: rgb(192, 191, 176);
+}
+
 .delete-reset {
   background: rgb(101, 113, 154);
   color: #fff;
@@ -107,18 +105,18 @@ button {
 // No media query for `xs` since this is the default in Bootstrap */
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   .calculator {
     padding: 6% 10%;
     height: 100vh;
   }
-}
+} */
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-  .calculator {
-    padding: 15% 25%;
-    height: 100vh;
+  body {
+    width: 30rem;
+    margin: auto;
   }
 }
 
