@@ -1,140 +1,147 @@
-body {
+* {
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-}
-.container {
-  background: rgb(59, 70, 100);
-  justify-content: center;
   box-sizing: border-box;
-  width: fit-content;
-  margin: 50px;
+  outline: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  justify-content: center;
+  align-items: center;
 }
-/* nav bar  */
-.nav {
-  display: flexbox;
-  margin: 8px;
-  float: right;
+section {
+  height: fit-content;
+  /* margin: 0; */
+  padding: 3% 5% 4.5%;
 }
+body {
+  background-color: rgb(59, 70, 100);
+}
+
+.nav-1 {
+  color: #fff;
+  position: absolute;
+  left: 85vw;
+  bottom: 95vh;
+}
+/* .nav {
+    display: flexbox;
+    margin: 8px;
+    float: right;
+  } */
 .theme {
   margin-right: 15px;
-  font-size: 10px;
+  font-size: 20px;
+  color: #fff;
+  position: absolute;
+  left: 70vw;
+  top: 3vh;
+}
+.form-switch {
+  position: absolute;
+  left: 85vw;
+  top: 3.5vh;
 }
 .cal {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 30px;
+  font-weight: bold;
+  color: #fff;
 }
-.switch {
-  position: relative;
-  display: inline-block;
-  width: 40px;
-  height: 22px;
-}
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgb(25, 25, 37);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  padding: 1px;
-}
-
-.slider:before {
-  position: absolute;
-  content: '';
-  height: 15px;
-  width: 15px;
-  left: 4px;
-  bottom: 4px;
-  background-color: rgb(223, 17, 17);
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-  border-radius: 50%;
-}
-.slider.round {
-  border-radius: 34px;
-}
-
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
-}
-
-input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
-}
-
-/* end of nav */
-
-/*input*/
-.calculator {
-  width: 300px;
-  height: 500px;
-  box-shadow: none;
-  border-radius: 12px;
-  overflow: hidden;
-  margin: 20px 0 20px 0;
-  padding: 2px 2px 2px 2px;
-  color: rgb(254, 252, 253);
-}
-
-form input {
+.screen {
   width: 100%;
   height: 70px;
   background-color: rgb(25, 31, 50);
   border: none;
-  border-radius: 5px;
-  text-align: right;
+  border-radius: 10px;
+  text-align: end;
   color: rgb(254, 252, 253);
-  pointer-events: none;
-}
-.buttons button {
-  width: 60px;
-  height: 60px;
-  font-size: 25px;
-  font-weight: 200;
-  border-radius: 5px;
-  flex: 0 0 20px;
-  margin: 2px 0;
-  color: rgb(68, 74, 90);
-  background-color: rgb(231, 228, 217);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.buttons .btn-div .b-red {
-  background-color: rgb(209, 63, 50);
-  width: 125px;
-  color: white;
-}
-.buttons .bdel {
-  background: rgb(101, 113, 154);
-  color: white;
-}
-.buttons .btn-div .b-grey {
-  width: 125px;
-  color: white;
-  background: rgb(101, 113, 154);
-  border: 1px rgb(162, 162, 206);
-}
-.buttons {
-  background: rgb(36, 46, 66);
+  /* pointer-events: none; */
+  margin: 5% 0;
+  font-size: 40px;
   padding: 20px;
-  height: 100%;
-  margin-top: 10px;
-  border-radius: 5px;
-  justify-content: space-between;
+}
+.grids {
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  /* grid-template-rows: repeat(5, 20%); */
+  grid-gap: 6% 3%;
+  /* row-gap: 0; */
+  margin: 10px;
+  justify-content: center;
+  /* height: 70%; */
+  /* overflow: hidden; */
+  height: fit-content;
+  padding: 10% 5% 28%;
+  border: 10px;
+  background-color: rgb(25, 31, 50);
+  border-radius: 3%;
+}
+.reset-equality {
+  grid-column: span 2;
+}
+
+button {
+  border-radius: 10%;
+  border: none;
+  /* height: 50%; */
+  box-shadow: 10%;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(68, 74, 90);
+  background-color: hwb(30 86% 8%);
+  box-shadow: 0 6px 0 rgb(192, 191, 176);
+  padding: 1rem 0.7rem;
+}
+.delete-reset {
+  background: rgb(101, 113, 154);
+  color: #fff;
+  box-shadow: 0 6px rgb(86, 97, 135);
+}
+.equality-red {
+  background-color: rgb(209, 63, 50);
+  color: #fff;
+  box-shadow: 0 6px rgb(176, 49, 37);
+}
+
+/* MEDIA QUERIES */
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .calculator {
+    padding: 6% 10%;
+    height: 100vh;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .calculator {
+    padding: 15% 25%;
+    height: 100vh;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* .calculator{
+        padding: 15% 25%;
+        height: 100vh;
+    } */
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* .calculator{
+        padding: 15% 25%;
+        height: 100vh;
+    } */
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  /* .calculator{
+        padding: 15% 25%;
+        height: 100vh;
+    } */
 }
